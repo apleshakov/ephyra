@@ -1,0 +1,9 @@
+__pycache__
+.idea
+*.iml
+build
+*.pyd
+*.pdb
+*.egg-info
+dist
+.mypy_cache

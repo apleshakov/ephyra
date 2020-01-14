@@ -1,0 +1,3 @@
+graft devscripts
+include pyproject.toml dev-requirements.in dev-requirements.txt
+recursive-include ephyra/tests *.py
