@@ -6,8 +6,8 @@ Ephyra
 Introduction
 ------------
 
-Ephyra is a library to help with mouse configuration for application software; includes both Python and C implementations. It supports full rotation and same
-screen ratio/distance approaches.
+Ephyra is a library to help with mouse configuration for application software; includes both Python and C (tested with
+Windows 10 and VS 2019 only) implementations. It supports full rotation and same screen ratio/distance approaches.
 
 Usage
 -----
@@ -39,7 +39,7 @@ application as well as characteristic of a particular setup. See tests for more 
 
     src = ScreenRatioCalculator(ratio1=.10, s1=dh2.primary_state, p1=dh2.parameters)
 
-    dh2_s2 = s2=dh2.get_state_for_fov(fov=radians(40))
+    dh2_s2 = dh2.get_state_for_fov(radians(40))
 
     src_c, src_sens = src.sensitivity_for(s1_sens=.0158, s2=dh2_s2)
 
