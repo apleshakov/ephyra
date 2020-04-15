@@ -17,19 +17,20 @@ application as well as characteristic of a particular setup. See tests for more 
 
     from fractions import Fraction
     from math import radians
+
     from ephyra import DataHelper, FT_HORIZONTAL, FS_HORIZONTAL_PLUS, FS_VERTICAL_MINUS, RT_AZIMUTHAL, \
         FullRotationCalculator, ScreenRatioCalculator, DetailsCalculator
     from ephyra.formula import horizontal_4_to_3_fov_coefficient, horizontal_fov_to_80_coefficient
 
-    dh1 =  DataHelper(screen_aspect_ratio=Fraction(16, 10), fov=radians(90), fov_aspect_ratio=Fraction(4, 3),
-                      fov_type=FT_HORIZONTAL, fov_scaling=FS_HORIZONTAL_PLUS, rt=RT_AZIMUTHAL,
-                      ltr_coefficient_transformation_formula=horizontal_4_to_3_fov_coefficient,
-                      radians_per_count=radians(0.022), counts_per_unit=800, screen_diagonal=24)
+    dh1 = DataHelper(screen_aspect_ratio=Fraction(16, 10), fov=radians(90), fov_aspect_ratio=Fraction(4, 3),
+                     fov_type=FT_HORIZONTAL, fov_scaling=FS_HORIZONTAL_PLUS, rt=RT_AZIMUTHAL,
+                     ltr_coefficient_transformation_formula=horizontal_4_to_3_fov_coefficient,
+                     radians_per_count=radians(0.022), counts_per_unit=800, screen_diagonal=24)
 
-    dh2 =  DataHelper(screen_aspect_ratio=Fraction(16, 10), fov=radians(100), fov_aspect_ratio=Fraction(16, 10),
-                      fov_type=FT_HORIZONTAL, fov_scaling=FS_VERTICAL_MINUS, rt=RT_AZIMUTHAL,
-                      ltr_coefficient_transformation_formula=horizontal_fov_to_80_coefficient,
-                      radians_per_count=radians(2.2278481012658227), counts_per_unit=800, screen_diagonal=24)
+    dh2 = DataHelper(screen_aspect_ratio=Fraction(16, 10), fov=radians(100), fov_aspect_ratio=Fraction(16, 10),
+                     fov_type=FT_HORIZONTAL, fov_scaling=FS_VERTICAL_MINUS, rt=RT_AZIMUTHAL,
+                     ltr_coefficient_transformation_formula=horizontal_fov_to_80_coefficient,
+                     radians_per_count=radians(2.2278481012658227), counts_per_unit=800, screen_diagonal=24)
 
     frc = FullRotationCalculator(dh1.primary_state, dh1.parameters, dh2.parameters)
 
