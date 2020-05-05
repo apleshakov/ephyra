@@ -24,7 +24,7 @@ _ephyra = Extension('_ephyra', sources=['_ephyra/_ephyramodule.c', '_ephyra/data
 setup(name='ephyra', version='0.1',
       ext_modules=[_ephyra], python_requires='>=3.8.1',
       packages=find_packages(exclude=['ephyra.tests', 'ephyra.tests.*']),
-      description='Library to help with mouse configuration for application software',
+      description='Library to help with mouse configuration',
       url='https://github.com/apleshakov/ephyra',
       author='Andrey Pleshakov',
       author_email='aplshkv@gmail.com',
