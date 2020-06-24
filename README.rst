@@ -6,8 +6,8 @@ Ephyra
 Introduction
 ------------
 
-Ephyra is a library to help with mouse configuration; includes both Python and native C
-(CPython, tested with Windows 10 and VS 2019 only) implementations. It supports full rotation and same screen
+Ephyra is a library to help with mouse input configuration; includes both Python and native C
+(CPython, tested with Windows 10 and Visual Studio 2019 tools) implementations. It supports full rotation and same screen
 ratio/distance approaches.
 
 Usage
